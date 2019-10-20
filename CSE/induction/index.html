@@ -1,0 +1,671 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A collaborative approach to modern education.">
+      
+      
+      
+        <meta name="author" content="hcs">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/slugdocs.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Induction Primer - SlugDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/katex.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#induction" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="SlugDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SlugDocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Induction Primer
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="SlugDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    SlugDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../community-guidelines/" title="Community Guidelines" class="md-nav__link">
+      Community Guidelines
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../submissions/" title="Submissions" class="md-nav__link">
+      Submissions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../workflow/" title="Workflow" class="md-nav__link">
+      Workflow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../howto/" title="How to Navigate This Site" class="md-nav__link">
+      How to Navigate This Site
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../feedback/" title="Feedback" class="md-nav__link">
+      Feedback
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Courses
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Courses
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1" checked>
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Computer Science and Engineering
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        Computer Science and Engineering
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1-2" type="checkbox" id="nav-7-1-2" checked>
+    
+    <label class="md-nav__link" for="nav-7-1-2">
+      CSE101
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-1-2">
+        CSE101
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cse101-f19-home/" title="Course Home" class="md-nav__link">
+      Course Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Induction Primer
+      </label>
+    
+    <a href="./" title="Induction Primer" class="md-nav__link md-nav__link--active">
+      Induction Primer
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#induction-step-by-step" class="md-nav__link">
+    Induction Step-By-Step
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assorted-induction-proofs" class="md-nav__link">
+    Assorted Induction Proofs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-induction-works" class="md-nav__link">
+    How Induction Works
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../asym-funcs/" title="Asymptotic Function Growth" class="md-nav__link">
+      Asymptotic Function Growth
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#induction-step-by-step" class="md-nav__link">
+    Induction Step-By-Step
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assorted-induction-proofs" class="md-nav__link">
+    Assorted Induction Proofs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-induction-works" class="md-nav__link">
+    How Induction Works
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="induction">Induction</h1>
+<p>Induction is a powerful mathematical tool, and plays a key role in proving asymptotic relationships. The purpose of this article is to walk through some examples of induction applied to various problems. It ends with a proof of <em>why</em> induction works. The name "mathematical induction" is a bit of a misnomer, as there isn't any inductive reasoning applied. More often, we use induction deductively. We see a pattern in a problem, and so we assume that that pattern holds over an arbitrarily large domain. </p>
+<blockquote>
+<p>As a side note, there's some people who think that induction is a bunch of tomfoolery. If you're curious, you can point your browser <a href="">here</a> to read some more about it. </p>
+</blockquote>
+<p>In broad strokes, mathematical induction consists of a logical progression of steps: </p>
+<ul>
+<li>First, <strong>observe some type of pattern</strong> or consistent relationship </li>
+<li><strong>Come up with some clever guess</strong> about a more general relationship that's occurring <ul>
+<li>Or, more likely, verify an established/required relationship </li>
+</ul>
+</li>
+<li><strong>Prove the base case</strong> (the smallest value/level for which this relationship is true)</li>
+<li><strong>Assume that this holds for all cases up to the $n^{th}$</strong><ul>
+<li>This is called the inductive <em>step</em> or inductive hypothesis. </li>
+</ul>
+</li>
+<li><strong>Show that this assumption implies that the $n+1^{st}$ case is also true</strong><ul>
+<li>We can also assume up to the $n-1^{st}$ case, and then prove the $n^{th}$</li>
+</ul>
+</li>
+</ul>
+<p>If that felt a bit abstract, don't worry. Things will make more sense after a couple of examples.</p>
+<h2 id="induction-step-by-step">Induction Step-By-Step</h2>
+<p>Let's start with an example that forces us to do a little bit of exploring. Playing with series is a great way to observe patterns and prove inductive results, as summations tend to be pretty regular.</p>
+<p>Consider the sum </p>
+<p>$$\sum_{i=0}^{n} i\cdot i!$$</p>
+<p>What does this mean? This sum adds together all the numbers from $0$ to $n$, where each has been multiplied by its factorial. If we were to expand the first 4 terms of the series, it would look like this. </p>
+<p>$$\begin{aligned}\sum_{i=0}^{0} i\cdot i! &amp;= 0\cdot 0! = 0 \\ 
+\sum_{i=0}^{1} i\cdot i! &amp;= 1\cdot 1! + 0\cdot 0! = 1\cdot 1 = 1 \\ 
+\sum_{i=0}^{2} i\cdot i! &amp;= 2\cdot 2! + 1\cdot 1! + 0\cdot 0! = 2\cdot 2 + 1 = 5 \\ 
+\sum_{i=0}^{3} i\cdot i! &amp;= 3\cdot 3! +2\cdot 2! + 1\cdot 1! + 0\cdot 0! = 3\cdot (3\cdot2\cdot1) + 2\cdot 2 + 1  = 23 \\ 
+\sum_{i=0}^{4} i\cdot i! &amp;= 4\cdot 4! + 3\cdot 3! +2\cdot 2! + 1\cdot 1! + 0\cdot 0! = 4\cdot (4\cdot3\cdot2\cdot1) + (3\cdot2\cdot1) + 2\cdot 2 + 1 = 119 \\ 
+\end{aligned}$$</p>
+<p>Now, it doesn't really look like there's much of a pattern here, other than the fact that the values get pretty big between each step. </p>
+<p>Why don't we take a closer look at the $3^{rd}$ iteration, to see if we can't cook up something clever. 
+$$3\cdot(3\cdot2\cdot1)+2\cdot(2\cdot1)+1$$</p>
+<p>Each successive summation contains all of the terms of the previous, which means that we might be able to pull a factorial out in some way. 
+In fact, it would be nice if we could pull out that leading three... Why don't we use the 'ol add-1, subtract-1 trick? </p>
+<p>$$3\cdot(3\cdot2\cdot1)+2\cdot(2\cdot1)+1 + (1 - 1)$$
+$$3\cdot(3\cdot2\cdot1)+ 4 + 1 + 1 - 1$$
+$$3\cdot(3\cdot2\cdot1) + 6 - 1$$ </p>
+<p>Okay, things seem to be getting a bit neater here. What happens when we pull out that leading 3? </p>
+<p>$$3(3\cdot2\cdot1 + 2) - 1$$ </p>
+<p>Huh. And, we could actually pull out a two, as well. </p>
+<p>$$3\cdot2(3\cdot1 + 1) - 1$$ </p>
+<p>Hey now! That's lookin sharp. Simplifying yields </p>
+<p>$$3\cdot2\cdot4\cdot1 - 1$$ </p>
+<p>Or perhaps more suggestively, </p>
+<p>$$4! - 1$$</p>
+<p>Interestingly, when $n=3$, the result of the summation is $4!-1$. Could this be a pattern? Let's check with one of our other cases. When $n=4$, we got that the sum was $119$. 
+$$(4+1)! - 1 = 5! - 1 = 120 - 1 = 119$$
+Nice! It looks like we might have a pattern. Namely, </p>
+<p>$$\sum_{i=0}^n i\cdot i! = (n+1)! - 1$$</p>
+<p>This is where the induction comes in. If we want to assert the truth of our prediction, we need to show that it holds for all values of $n$. Unfortunately, we can't brute force this. There's no possible ways to verify that the statement is true for all $n$ by computing each value, because we'd have an infinite number of computations. However, we have a pattern, and our input domain is positive integers. So, we can induct, and see what happens. </p>
+<p>The first step is proving the base case. For us, that is when $n=0$. We want to show that our guess is true in the smallest possible case. When $n=0$, the summation was equal to $0$, as we saw before. To verify the base case, we can just plug in our guess and see what happens. Letting $n=0$,<br />
+$$(n+1)!-1 = (0+1)! - 1 = 1 - 1 = 0$$ 
+Fantastic. The base case is proved. </p>
+<p>Now, we take the inductive step, which means that we make a pretty big assumption -- one of those "trust me, this will work"-types of assumptions. In formal language, we'd say something like this. </p>
+<p><em>Having proven the base case (where $n=1$), we assume that for all $1\leq k &lt; n$,</em> 
+$$\sum_{i=0}^k i\cdot i! = (k+1)! - 1$$ </p>
+<p>A couple parts of this can be tricky to understand, at first. First of all, we've introduced a new variable. What the heck is $k$ doing in there? Well, we're essentially saying that we trust our hypothesis to be true. So much so, in fact, that we just <em>assume</em> that it's true, for an arbitrarily large number of inputs ($0$ to $k$). What's important is what we're about to show with this hypothesis. In an induction proof, we'd probably follow the statement above with something like this: </p>
+<p><em>We now show that</em> 
+$$\sum_{i=0}^n i\cdot i! = (n+1)! - 1$$</p>
+<p>The previous step is important, as it gives us the tools to prove this $n^{th}$ case. Typically, we apply induction to problems that are naturally a little bit recursive, or where each iteration builds on the previous. In our case, the crux of the proof is the fact that 
+$$\sum_{i=0}^n i\cdot i! \,=\, n\cdot n! + \sum_{i=0}^{n-1} i\cdot i!$$</p>
+<p>Why is that important? If we look back at the inductive hypothesis that we made, we gave ourselves the assumption that the statement 
+$$\sum_{i=0}^k i\cdot i! = (k+1)! - 1$$ 
+was true, provided that $0\leq k &lt; n$. </p>
+<p>$n-1$ is greater than 1, and certainly less than $n$, which means that we can apply our inductive hypothesis to the second sum. In other words, <em>by the inductive hypothesis</em> </p>
+<p>$$\begin{aligned}
+\sum_{i=0}^n i\cdot i! \, &amp;= \, n\cdot n! + \sum_{i=0}^{n-1} i\cdot i! \\
+&amp;= n\cdot n! + ((n-1)+1)! - 1
+\end{aligned}$$</p>
+<p>This is great. Now, all we need to show is that </p>
+<p>$$n\cdot n! + ((n-1)+1)! - 1 = (n+1)! - 1$$ </p>
+<p>and we're done! From here, it's all algebra. </p>
+<p>$$\begin{aligned} 
+n\cdot n! + ((n-1)+1)! - 1 &amp;= n\cdot n! + n! - 1 \\
+&amp;= n!(n+1) - 1 \\
+&amp;= (n+1)! - 1 
+\end{aligned}$$ </p>
+<p>And, at this point, we could say something smug and clever like <em>As desired</em>, and end our proof.</p>
+<p>This was perhaps a long-winded introduction, but it can be helpful to walk through each step and explore <em>what's really going on</em>. A more terse version will be included in the example problems below to demonstrate what a typical proof might look like, smugness and all. As you walk through the problems below, I encourage you to note the 3 key characteristics of any inductive proof: </p>
+<ul>
+<li>The base case </li>
+<li>The inductive step </li>
+<li>Application of the inductive hypothesis to prove the result </li>
+</ul>
+<p>And, if you're feeling ambitious, try to solve some of these problems on your own, before proceeding to the proofs. 
+I wish you the best of luck in your inductive wanderings! </p>
+<h2 id="assorted-induction-proofs">Assorted Induction Proofs</h2>
+<p>[[ INSERT PRACTICE PROBLEMS BELOW WITH SOURCE CITATIONS ]]</p>
+<h2 id="how-induction-works">How Induction Works</h2>
+<p>[[ USE THIS SPACE FOR THE THEORETICAL UNDERPINNINGS OF INDUCTION ]]</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../cse101-f19-home/" title="Course Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Course Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../asym-funcs/" title="Asymptotic Function Growth" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Asymptotic Function Growth
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Built with care by <a href="http://github.com/hcslayer">hcs</a> &copy; 2019
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../scripts/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

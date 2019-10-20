@@ -1,0 +1,813 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A collaborative approach to modern education.">
+      
+      
+      
+        <meta name="author" content="hcs">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/slugdocs.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Asymptotic Function Growth - SlugDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/katex.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#asymptotic-growth-of-functions" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="SlugDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SlugDocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Asymptotic Function Growth
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="SlugDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    SlugDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../community-guidelines/" title="Community Guidelines" class="md-nav__link">
+      Community Guidelines
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../submissions/" title="Submissions" class="md-nav__link">
+      Submissions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../workflow/" title="Workflow" class="md-nav__link">
+      Workflow
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../howto/" title="How to Navigate This Site" class="md-nav__link">
+      How to Navigate This Site
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../feedback/" title="Feedback" class="md-nav__link">
+      Feedback
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Courses
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Courses
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1" checked>
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Computer Science and Engineering
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        Computer Science and Engineering
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1-2" type="checkbox" id="nav-7-1-2" checked>
+    
+    <label class="md-nav__link" for="nav-7-1-2">
+      CSE101
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-1-2">
+        CSE101
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cse101-f19-home/" title="Course Home" class="md-nav__link">
+      Course Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../induction/" title="Induction Primer" class="md-nav__link">
+      Induction Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Asymptotic Function Growth
+      </label>
+    
+    <a href="./" title="Asymptotic Function Growth" class="md-nav__link md-nav__link--active">
+      Asymptotic Function Growth
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-things" class="md-nav__link">
+    Some Things
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-o" class="md-nav__link">
+    Big O
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-omega" class="md-nav__link">
+    Big Omega
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theta" class="md-nav__link">
+    $\Theta$
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limit-definitions" class="md-nav__link">
+    Limit Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#littles" class="md-nav__link">
+    Littles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems" class="md-nav__link">
+    Practice Problems
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-things" class="md-nav__link">
+    Some Things
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-o" class="md-nav__link">
+    Big O
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-omega" class="md-nav__link">
+    Big Omega
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theta" class="md-nav__link">
+    $\Theta$
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limit-definitions" class="md-nav__link">
+    Limit Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#littles" class="md-nav__link">
+    Littles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems" class="md-nav__link">
+    Practice Problems
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!--
+
+! Notes:  
+! - Need to clean up defs, and make more precise. 
+! - Need to get clear about what's zero and what's nonzero 
+! - Add examples 
+! - Add graphics  
+
+-->
+
+<h1 id="asymptotic-growth-of-functions">Asymptotic Growth of Functions</h1>
+<p>[[ ADD SOME PRELIM NOTES HERE ]] </p>
+<p>For the purposes of algorithmic analysis, we're particularly concerned with how an algorithm performs when the inputs get really, really large. Two functions that sort a 10-element array at around the same speed may behave very, very differently when that 10 element array has 100, 10000, or 10000000000000 elements. As such, to explore, analyze, and classify the runtimes of various algorithms, we use (and abuse) <em>asymptotic notation</em>. </p>
+<p>At the heart of this exploration, we have five <strong>sets</strong>: $\Theta$, $O$, $\Omega$, $o$, and $\omega$. These collections allow us to compare functions relative to their asymptotic growth rates. In other words, these sets group functions based on how they behave for sufficiently large inputs, <em>relative to another function</em>.</p>
+<p>[[ ADD FIGURE ]]</p>
+<p>For now, think of expressions like 
+$f(n) = \Omega(g(n))$ as saying <em>'the function $f$ is related to the function $g$ by a relationship defined by $\Omega$'</em>.</p>
+<h2 id="some-things">Some Things</h2>
+<p>There's a couple things that we need to make clear from the onset. First, we restrict ourself to analyzing <em>asymptotically nonnegative</em> and <em>asymptotically positive</em> functions. All this means is that our functions stay positive and/or nonzero as they approach infinity. </p>
+<p>Second, the constructs $\Theta, O, \Omega, o, \omega$ are <strong>sets</strong>, but we follow this strange convention of writing $f(n) = O(g(n))$ or $f(n) = \Theta(g(n))$ to mean that $f(n)$ is <em>in</em> the set $O(g(n))$ or $\Theta(g(n))$. Typically, we would use the set inclusion notation "$\in$" but apparently that's out of style. (Too archaic? No ASCII symbol? I dunno.) </p>
+<h2 id="big-o">Big O</h2>
+<p>Let's start with $O$ (big-oh). <br />
+$O(g(n))$ is a set, a collection of all the functions $f(n)$ such that $f(n)$ is less than or equal to a constant multiple of $g(n)$, when $n$ is sufficiently large. In other words, $O(g(n))$ contains all functions <em>bounded above</em> by some factor of $g(n)$.  Visually, this means that </p>
+<p>[[ INSERT FIGURE ]] </p>
+<p>As you can see, we're really only concerned with the behavior of functions relative to each other after a certain 'sticking point'. In the graph above, $f(n)$ does some wiggling around before it settles down to be bounded above by $c\cdot g(n)$, and that's fine by us. On an infinite scale, it's still eventually bounded above by some multiple of $g$, and that's all that we really care about. To be formal, we can define the set $O$ explicitly, as follows </p>
+<blockquote>
+<p>In symbols: </p>
+<p>$$O(g(n)) = \bigg\lbrace f(n)\,\bigg|\, \exists c, n_0 \,\text{such that}\, \forall n \geq n_0, \,\, 0\leq f(n) \leq cg(n)\bigg\rbrace$$</p>
+<p>In words: </p>
+<p>The set $O(n)$ is defined as all functions $f$ such that for a choice of $c$, and a constant $n_0$, $f(n)$ is bounded above by $c\cdot g(n)$. </p>
+</blockquote>
+<p>This states that $O(g(n))$ is the set of all functions $f(n)$ such that $f(n)$ is bounded above by a constant multiple of $g(n)$ for some constant $c$ and a 'sticking point' $n_0$. </p>
+<p>This formal definition really just re-iterates what we can see in the figure. $O(g(n))$ contains anything that can be bounded above by $g(n)$ or some constant multiple of $g(n)$, provided that we let $n$ get big enough. And, the formal definition enables us to "prove" that something is in $O(g(n))$, which is one of our primary goals for any of these asymptotic collections.  </p>
+<p>Let's take a look at some examples, starting with a very simple one.</p>
+<blockquote>
+<p>Let $f(n) = n$ and $g(n) = n^2$. Show that $f(n) = O(g(n))$. </p>
+<p>How do we show this? Well, we know by the definition that we need to show that $0\leq f(n)\leq cg(n)$ for some constant $c$, and all $n \geq n_0$. When $n=1$, we can see that $n = n^2$. After that point, $n^2 &gt; n$. So, if we let $c=1$ and $n_0 = 1$, we find that $0\leq f(n)\leq cg(n)$ for all $n \geq n_0$. As $1$ is a nonzero constant, the definition of $O$ is satisfied. </p>
+</blockquote>
+<p>And that's it! For relatively simple functions, all we need to do is find the coefficients. It's an example of <em>constructive proof</em>. Let's take a look at another. </p>
+<details>
+<summary>Prove or disprove: $3n^2+2 = O(n^2)$</summary>
+> Prove or disprove: $3n^2+2 = O(n^2)$
+> 
+> In this example, the abstracted functions $f(n)$ and $g(n)$ we were working with have been replaced by their literals, $3n^2+2$ and $n^2$. 
+>
+>At first, it may seem unreasonable to say that this assertion is true. How could $3n^2+2$ be bounded above by $n^2$? The secret is in the coefficients. Remember that $O(n^2)$ means that we compare functions to any constant multiple of $n^2$, not just the function itself. 
+> 
+> For the sake of example, look back to the definition of $O(g(n))$. As you'll see, we're entitled to **any** coefficient we want. So, it would not be "out of bounds" to let $c = 10,000$, for example. Clearly, $3n^2+2 \leq 10000\cdot n^2$ for all $n$, which proves that $3n^2+2 = O(n^2)$. However, it's helpful to illustrate a more realistic search for constants.   
+> Let's start with what we're trying to show: 
+>
+> $$0\leq 3n^2+2 \leq c\cdot n^2$$
+>
+> With a bit of re-arrangement, we get 
+>
+> $$0\leq 3 + \frac{2}{n^2}\leq c$$ 
+> Now, recall that we have more or less full control over the values of $n_0$ and $c$, so long as they are constant and nonzero. For example, if we fix $n_0 = 1$, we can pretty readily determine the required coefficient to satisfy the $O(n^2)$ definition. Holding $n_0 = 1$: 
+> 
+> $$0\leq 3+2 = 5 \leq c$$ 
+> This tells us that for all $n \geq n_0 = 1$, and for the constant $c=5$, 
+> 
+> $$ 0\leq 3n^2+2 \leq n^2$$ 
+> Which is precisely the definition of $3n^2+2 = O(n^2)$, completing the proof. 
+</details>
+
+<p>As shown in the examples, we can prove that $f(n)=O(g(n))$ by finding a precise set of coefficients that satisfies the relation. We'll see in a little bit how we can use limits to prove these relationships without needing to find a specific example. </p>
+<p><strong>In Summary</strong>: 
+- Big Oh, $O(g(n))$, defines a set of functions bounded above by constant multiples of the function $g(n)$. 
+- One way to prove that $f(n) =O(g(n))$ is to find an explicit set of coefficients that satisfy the definition: </p>
+<p>$$0\leq f(n)\leq c\cdot g(n) \quad \forall n\geq n_0$$</p>
+<h2 id="big-omega">Big Omega</h2>
+<p>As we just saw, $O(g(n))$ is a collection of functions bounded above by constant multiples of $g(n)$. We can explore other types of asymptotic relationships, too. Big Omega, $\Omega(g(n))$, is another collection, this time gathering all the functions that are <em>bounded below</em> by constant multiples of $g(n)$. </p>
+<p>This isn't all too different from what we just saw with $O(g(n))$, except the set is just describing a different relationship. The formal definition for $\Omega(g(n))$ is the following: </p>
+<p>$$\Omega(g(n)) = \bigg\lbrace\,f(n)\,\bigg|\, \exists c, n_0 \,\,\text{such that}\,\, 0\leq c\cdot g(n) \leq f(n) \,\,\text{for all}\,\, n\geq n_0\bigg\rbrace$$</p>
+<p>Which, in English, means that $\Omega(g(n))$ is a collection of all functions that are bounded below by a constant multiple of $g(n)$, for $n$ sufficiently large. (Precisely speaking, for $n$ greater than some constant $n_0$.)</p>
+<p>As before, we can visualize $\Omega(g(n))$ with respect to some arbitrary function $f(n)$. </p>
+<p>[[ INSERT FIGURE ]]</p>
+<p>As most of this should be a re-interpretation of the concepts we covered with $O(g(n))$, let's dive right into some exercises. </p>
+<details> 
+<summary>Provide an example here</summary>
+TODO 
+</details>
+
+<details>
+<summary>Do another example here, to show that something can be both $\Omega$ and $O(g(n))$. 
+</details>
+
+<p>What the previous example shows us is that $\Omega(g(n))$ and $O(g(n))$ aren't mutually exclusive. Interesting, right? The key here is, yet again, the way we are allowed to use constants while making asymptotic comparisons. For all practical purposes, constants are more or less irrelevant when making comparisons with respect to $\Omega$ or $\Theta$ of some function $g$. We'll formalize this intuition later, but if you think about what's going on, it makes a lot of sense. Even scalar multiples such as $10000\cdot n^2$ don't make much of a difference at an infinite scale. </p>
+<p>However, when a function $f$ is related to $g$ by both $f(n)=O(g(n))$ and $f(n)=\Omega(g(n))$, we can say even more, as we'll see in the next section. </p>
+<p><strong>In Summary</strong> 
+- Like $O(g(n))$, $\Omega(g(n))$ characterizes functions that have an asymptotic relationship to $g(n)$. 
+- Unlike $O(g(n))$, $\Omega(g(n))$ collects all the functions that are bounded <em>below</em> by a constant multiple of $g(n)$. 
+- For now, we stick to finding explicit coefficients to prove $f(n)=\Omega(g(n))$, just as we found coefficients for $O(g(n))$. </p>
+<h2 id="theta">$\Theta$</h2>
+<p>In the previous section, we saw that a function $f(n)$ can "float" between two multiples of another function $g(n)$, thereby satisfying $f=O(g(n))$ and $f=\Omega(g(n))$. If we were to draw this on a graph for some aribitrary functions $f$ and $g$, it would look something like this: </p>
+<p>[[ INSERT FIGURE ]]</p>
+<p>As it turns out, this isn't all that uncommon. In fact, we have a special notation for these types of situations. </p>
+<p>We say that $f(n) = \Theta(g(n))$ (Theta of g of n) when $f(n)$ is smooshed between two constant multiples of $g(n)$, for all $n$ greater than some constant $n_0$. </p>
+<p>In set-builder notation, this means: </p>
+<p>$$\Theta(g(n)) = \bigg\lbrace\,f(n)\,\bigg|\,\exists c_0, c_1, n_0 \,\text{such that}\,\, 0\leq c_0g(n)\leq f(n)\leq c_1g(n)\,\text{for all}\,\, n\geq n_0\bigg\rbrace$$</p>
+<p>Notice that if $f(n)=O(g(n))$, and $f(n)=\Omega(g(n))$, then $f(n)=\Theta(g(n))$, by default. To see why, consider that 
+- $f(n)=O(g(n))$ implies that for some constant $c_1$ and another constant $n_0$, $0\leq f(n)\leq c_1g(n)$ for $n\geq n_0$. 
+- $f(n)=\Omega(g(n))$ implies that for some constant $c_0$ and another constant $n_1$, $0\leq c_0g(n)\leq f(n)$ for $n\geq n_1$. 
+- For all $n$ greater than $n_0$ or $n_1$ (whichever is bigger), both of the statements above will be true at the same time.
+- In symbols, this means that for $n\geq max(n_0, n_1)$, </p>
+<p>$$0\leq c_0g(n)\leq f(n)\leq c_1g(n)$$</p>
+<p>Which is just what we wanted! $\Theta(g(n))$ defines what is called a <em>tight</em> asymptotic bound. </p>
+<p>To prove $f(n)=\Theta(g(n))$ for functions $f$ and $g$, we can do the coefficient hunting that we did before. Only this time, we need to find two coefficients. Personally, I find it a bit easier to solve $f(n)=\Omega(g(n))$ and $f(n)=O(g(n))$ separately, and then combine the coefficients for $n$ greater than the max of the sticking point for each function. </p>
+<p>Here's an example of that idea at work. </p>
+<details>
+<summary>Example with $\Omega$ and $O$ to prove $\Theta$</summary>
+TODO
+</details>
+
+<blockquote>
+<p>Internal/Dev note: play up the sticking point bit a little bit more. I think that it's instructive and intuitive.</p>
+</blockquote>
+<p><strong>In Summary</strong> 
+- $\Theta, O, \Omega$ all relate growth rates 
+- $O(g(n))$ characterizes all functions bounded above by a factor of $g(n)$. 
+- $\Omega(g(n))$ characterizes all functions bounded below by a factor of $g(n)$. 
+- $\Theta(g(n))$ characterizes functions smooshed in between two factors of $g(n)$
+- $\bigg(f(n)=\Omega(g(n))\bigg) + \bigg(f(n)=O(g(n))\bigg) = \bigg(f(n) = \Theta(g(n))\bigg)$
+- For now, we're still stuck with finding coefficients to prove that this is true. </p>
+<h2 id="limit-definitions">Limit Definitions</h2>
+<p>Using limits to define $\Theta, \Omega$, and $O$ is particularly convenient. Really, we're investigating the limiting behavior (what happens at $\infty$) of functions relative to each other, so the limit is almost a natural consequence. </p>
+<p>Take the statement $f(n)=O(g(n))$, for example. </p>
+<p>The definition of $O(g(n))$ tells us that this means </p>
+<p>$$0\leq f(n)\leq c\cdot g(n)$$</p>
+<p>For a sufficiently large $n$. However, if we divide each side by $g(n)$, we get </p>
+<p>$$0\leq \frac{f(n)}{g(n)} \leq c \qquad (1)$$</p>
+<p>As $c$ is a constant, this inequality is equivalent to the limit </p>
+<p>$$\lim_{n\to\infty} \frac{f(n)}{g(n)} = L \quad \text{where}\quad 0\leq L &lt; \infty \qquad (2)$$</p>
+<p>The limit can't be infinite, because we're locked down by the constant on the far right of the inequality. The limit, however, can be zero. If this is confusing, remember that the inequality $(1)$ must be true for <strong>all</strong> $n$. So, even as $n$ becomes infinitely large, $\frac{f(n)}{g(n)}$ must be some finite number. </p>
+<p>We can define a similar limit for $\Omega(g(n))$. </p>
+<p>$f(n) = \Omega(g(n))$ implies that for sufficiently large $n$, and a constant $c$,  </p>
+<p>$$0\leq c\cdot g(n) \leq f(n)$$ </p>
+<p>Re-arranging as before, we can see that </p>
+<p>$$0&lt; c\leq \frac{f(n)}{g(n)}$$ </p>
+<p>Which means, that as the inputs become arbitrarily large, $\frac{f(n)}{g(n)}$ needs to stay above a certain constant threshold. Translating that inequality into a limit, we find</p>
+<p>$$\lim_{n\to\infty} \frac{f(n)}{g(n)} = L \quad \text{where} \quad 0 &lt; L\leq \infty$$</p>
+<p>These limits are awesome for two reasons: first, they're a bit more intuitive for comparing the relative behavior of functions as the inputs approach arbitrarily large values. Second, it makes solving complex asymptotic relationships really really easy.</p>
+<p>Here's a couple of examples to gnaw on. </p>
+<p>[[ INSERT EXAMPLES ]]</p>
+<p>$\Theta(g(n))$ has a natural limit definition, too. </p>
+<p>The definition of $f(n) = \Theta(g(n))$ implies that for nonzero constants $c_0, c_1$, and for $n$ beyond the sticking point $n_0$, </p>
+<p>$$0\leq c_0g(n) \leq f(n) \leq c_1g(n)$$ </p>
+<p>Dividing through by $g(n)$ gives </p>
+<p>$$0 &lt;  c_0 \leq \frac{f(n)}{g(n)} \leq c_1$$</p>
+<p>Which, as a limit, implies that </p>
+<p>$$\lim_{n\to\infty} \frac{f(n)}{g(n)} = L \quad \text{where} \quad 0 &lt; L &lt; \infty$$</p>
+<p>Just as $\Omega + O = \Theta$ when we were playing around with constants, we can see that when the limiting behavior of $\frac{f(n)}{g(n)}$ satisfies the limit definitions for both $O$ and $\Omega$, it will naturally satisfy the limit definition for $\Theta$. </p>
+<p>Using these limits, we can start to develop a more sophisticated insight into how functions behave relative to each other. </p>
+<h2 id="littles">Littles</h2>
+<p>We have two more sets to talk about before we can wrap up our exploration of asymptotic function analysis. For the purposes of comparing functions and analyzing algorithms, it can be particularly useful to classify  and collection functions that <em>aren't</em> within a constant multiple of the function that we're comparing them to. This really isn't all that different from the things that we were doing before: the bounds just become a bit more strict. </p>
+<p>We have two collections that encode this type of information: $o$ (little-oh), which is an analog to $O$, and $\omega$ (little-omega), which is an analog to $\Omega$. </p>
+<p>The definitions and explanations that follow will <em>look</em> similar, but there's some important, subtle differences to be attuned to. </p>
+<p>$o(g(n))$ contains all functions that are bounded above by $g(n)$, and <strong>not</strong> within a constant factor. For $o$ and $\omega$, set builder notation can actually be more useful, as the differences aren't so easy to depict visually. </p>
+<p>At any rate, this is how we define $o(g(n))$ in symbols. Important characteristics of the definition have been bolded. </p>
+<p>$$o(g(n)) = \bigg\lbrace\, f(n)\, \bigg|\, \textbf{for all constants}\, c, \,\text{and for} \,n \geq n_0,\,\, 0\leq f(n) &lt; cg(n)\bigg\rbrace$$</p>
+<p>This states that for <strong>ANY</strong> constant $c$, and for $n$ sufficiently large, $f(n)$ will always be strictly less than some constant multiple of $g(n)$. Though this may seem subtle, it's actually the characteristic, profound, difference between $O(g(n))$ and $o(g(n))$. This tells us that $f(n)=o(g(n))$  if and only if $f(n)$ is significantly smaller than $g(n)$, even near infinity. </p>
+<p>The limit definition is perhaps the most intuitive way to understand $o(g(n))$. If we divide the inequality in the definition above by $g(n)$, we get </p>
+<p>$$ 0\leq \frac{f(n)}{g(n)} &lt; c $$ </p>
+<p>Because this holds for all values of $c$, $\frac{f(n)}{g(n)}$ <em>must tend to 0</em> as $n$ approaches infinity. </p>
+<p>In other words, </p>
+<p>$$f(n) = o(g(n))\quad  \Leftrightarrow \quad \lim_{n\to\infty}\frac{f(n)}{g(n)} = 0$$</p>
+<p>Where that cute little arrow in the middle means <em>if and only if</em>. </p>
+<p>In broad strokes, $f(n) = o(g(n))$ tells us that $g(n)$ grows significantly faster than $f(n)$, meaning that $f(n)$ is bounded above by $g(n)$, where the bound is <strong>strict</strong>. </p>
+<p>Becuase $o(g(n))$ is a more specific criteria for upper bounds than $O(g(n))$, it follows that $o(g(n))\subset O(g(n))$. </p>
+<blockquote>
+<p>For those unfamilar with set notation, $\subset$ means "subset of". In simple terms, $A\subset B$ means that anything in the set $A$ is also in $B$. </p>
+</blockquote>
+<p>So, if $f(n) = o(g(n))$, you can bet that $f(n) = O(g(n))$, too. 
+If you look at the limits, or the inequality definitions, they'll check out to confirm this fact. </p>
+<blockquote>
+<p>If you're interested in a challenge, see if it works the other way around. Does $f(n) = O(g(n))$ imply $f(n) = o(g(n))$? </p>
+</blockquote>
+<p>So, $o(g(n))$ covers functions bounded above by $g(n)$, where the bound is strict. Similarly, $\omega(g(n))$ collects all the functions that are bounded below by $g(n)$, where the lower bound is strict.</p>
+<p>This strict lower bounding has a familiar looking set-builder definition. </p>
+<p>$$\omega(g(n)) = \bigg\lbrace\, f(n)\, \bigg|\, \textbf{for all constants}\, c, \,\text{and for} \,n \geq n_0,\,\, 0\leq cg(n) &lt; f(n)\bigg\rbrace$$</p>
+<p>This time, the role of $f$ and $g$ is reversed. And, where there's functional inequalities, a limit is sure to follow.</p>
+<p>Taking the inequality from the definition: </p>
+<p>$$0 \leq cg(n) &lt; f(n)$$</p>
+<p>And, dividing through by $g(n)$ </p>
+<p>$$0 \leq c &lt; \frac{f(n)}{g(n)} $$</p>
+<p>Recall that $c$, in this case, represents every possible constant. The only number strictly greater than every possible constant is the big one, infinity. </p>
+<p>So, the limiting behavior of $\frac{f(n)}{g(n)}$  must tend to infinity. </p>
+<p>Or, more succinctly, </p>
+<p>$$f(n) = \omega(g(n))\quad  \Leftrightarrow \quad \lim_{n\to\infty}\frac{f(n)}{g(n)} = \infty$$</p>
+<p><strong>In Summary</strong> 
+- $o$ and $\omega$ define strict asymptotic bounds 
+- $o(g(n))$ is analogous to $O(g(n))$, and defines functions bounded above by $g(n)$, where the bound is strict (<em>not</em> within a constant multiple) 
+- $\omega(g(n))$ is analogous to $\Omega(g(n))$, and defines functions bounded below by $g(n)$, where the bound is strict. 
+- We've got limits for both $\omega$ and $o$. </p>
+<h2 id="practice-problems">Practice Problems</h2>
+<p>{{ ADD PRACTICE PROBLEMS }}</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../induction/" title="Induction Primer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Induction Primer
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Built with care by <a href="http://github.com/hcslayer">hcs</a> &copy; 2019
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../scripts/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
